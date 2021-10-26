@@ -2,7 +2,6 @@ body {
   display: flex;
   justify-content: center;
 
-
   font-family: "Montserrat", sans-serif;
   background: rgba(196, 196, 196, 0.8);
 }
@@ -22,4 +21,18 @@ body {
 
 h1 {
   color: #fff;
+}
+
+input{  
+  width: 426.13px;
+  height: 49.7px;
+}
+
+button {
+  width: 143px;
+  height: 34px;
+
+  background: #ffffff;
+  border-radius: 20px;
+  align-items: center;
 }

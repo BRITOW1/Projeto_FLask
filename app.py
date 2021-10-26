@@ -6,7 +6,5 @@ app = Flask(__name__)
 def index():
     return render_template('loign.html')
 
-
-
 if __name__ == "__main__":
 	app.run()
