@@ -1,15 +1,10 @@
-.procura {
+body {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-}
-
-.escolhas {
-    display: grid;
-    justify-content: center;
     font-family: "Montserrat", sans-serif;
-    background-image: url("{{ url_for('static', filename='img/home.jpg')}}");
-    margin-top: 10vh;
+    background: rgba(196, 196, 196, 0.8);
+    background-image: url("{{ url_for('static', filename='img/home.jpg')}}")
 }
 
 .tela-login {
@@ -25,22 +20,22 @@
 }
 
 h1 {
-    color: #000;
+    color: #ffffff;
     text-align: center;
     padding: 10px;
 }
 
 input {
-    width: 90%;
-    max-width: 1205vh;
+    width: 426.13px;
+    height: 49.7px;
     border-radius: 10px;
 }
 
 button {
-    width: 425px;
-    height: 92px;
-    left: 325px;
-    top: 290px;
-    background: #006494;
-    border-radius: 45px;
+    width: 143px;
+    height: 34px;
+    background: #ffffff;
+    border-radius: 20px;
+    align-items: center;
+    margin-bottom: 4 vh;
 }
