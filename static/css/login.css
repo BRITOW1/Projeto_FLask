@@ -1,34 +1,62 @@
 body {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
     display: flex;
+    flex: 1;
+
+    background: #E0E7E7;
+    background-image: url('/static/img/111.png');
+    background-repeat: no-repeat;
+    background-position-x: 55vw;
+    background-position-y: 10vw;    
+}
+
+.page-home{
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "Montserrat", sans-serif;
-    background: rgba(196, 196, 196, 0.8);
-    background-image: url("{{ url_for('static', filename='img/home.jpg')}}")
+    flex: 1;
+    height: 1280px;
+
+}
+
+img{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;   
 }
 
 .tela-login {
-    width: 603.75px;
+    width: 25%;
     height: 345px;
-    display: flexbox;
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     background: #024e73;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    margin-top: 30vh;
 }
 
 h1 {
     color: #ffffff;
     text-align: center;
-    padding: 10px;
+    
 }
 
 input {
     width: 426.13px;
     height: 49.7px;
     border-radius: 10px;
+    margin-top: 10px;
 }
 
 button {
@@ -37,5 +65,5 @@ button {
     background: #ffffff;
     border-radius: 20px;
     align-items: center;
-    margin-bottom: 4 vh;
+    margin-top: 15px;
 }

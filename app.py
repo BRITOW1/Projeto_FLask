@@ -29,9 +29,9 @@ def problemaEntraga():
 def compraErrada():
     return render_template('compraErrada.html')
 
-# @app.route('/home')
-# def index():
-#     return render_template('index.html')
+@app.route('/pagamento')
+def pagamento():
+    return render_template('pagamento.html')
 
 # @app.route('/home')
 # def index():
