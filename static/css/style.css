@@ -81,12 +81,7 @@ input {
     padding: 32px;
 }
 
-.items-grid a {
-    height: 100px;
-    margin: 20px;
-}
-
-.items-grid a button{
+.items-grid button {
     background-color: #024E73;
     list-style: none;
 
@@ -94,8 +89,8 @@ input {
     border-radius: 45px;
 
     height: 100px;
-    margin: 20px;
-    padding: 16px;
+    margin-top: 20px;
+    padding: 25px;
     justify-content: center;
     align-items: center;
 
