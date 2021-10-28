@@ -10,7 +10,7 @@ body {
 .tela-login {
     width: 603.75px;
     height: 345px;
-    display: grid;
+    display: flexbox;
     justify-content: center;
     align-items: center;
     background: #024e73;
