@@ -1,5 +1,9 @@
-{% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Buscar Erros {% endblock %}</h1>
+{% extends 'base.html' %}
+
+{% block title %} {{ super() }} Buscar Erros {% endblock %} <!-- super acrescenta o texto ao bloco trazido -->
+{% block content %}
+
+<h1> Buscar Erros </h1>
 <div class="procura">
     <input id="procurar" type="search" placeholder="Buscar">
 </div>
@@ -11,4 +15,8 @@
     <a href="{{ url_for('pagamento') }}"><button>Preço/Pagamento</button> </a> 
     <a href="{{ url_for('arrependimento') }}"><button>Não reconheço essa compra</button> </a> 
 </div>
+
+
+  
 {% endblock %}
+************************************************
