@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block content %}
+<h1>{% block title %} Preço/Pagamento {% endblock %}</h1>
+<div class="items-grid">
+    <a href="{{ url_for() }}"><button>Encontrei um preço melhor</button></a>
+    <a href="{{ url_for() }}"><button>Cobrança incorreta</button> </a> 
+    <a href="{{ url_for() }}"><button>Seleção incorreta da forma de pagamento</button> </a> 
+    <a href="{{ url_for() }}"><button>Já paguei e consta pendente</button> </a> 
+</div>
+{% endblock %}

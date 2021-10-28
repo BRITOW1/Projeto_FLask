@@ -1,17 +1,14 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Buscar Erros {% endblock %}</h1>
 <div class="procura">
-    <input id="procurar" type="search" placeholder="Procurar">
+    <input id="procurar" type="search" placeholder="Buscar">
 </div>
 <div class="items-grid">
-
-    <button>Compra do produto errado</button>
-    <button>Arrependimento da compra</button>
-    <button>Problema com a entrega</button>
-    <button>Produto errado e/ou com problema</button>
-    <button>Preço/Pagamento</button>
-    <button>Não reconheço essa compra</button>
-
-
+    <a href="{{ url_for('compraErrada') }}"><button>Compra do produto errado</button></a>
+    <a href="{{ url_for('arrependimento') }}"><button>Arrependimento da compra</button> </a> 
+    <a href="{{ url_for('problemaEntraga') }}"><button>Problema com a entrega</button> </a> 
+    <a href="{{ url_for('produtoErrado') }}"><button>Produto errado e/ou com problema</button> </a> 
+    <a href="{{ url_for('pagamento') }}"><button>Preço/Pagamento</button> </a> 
+    <a href="{{ url_for('arrependimento') }}"><button>Não reconheço essa compra</button> </a> 
 </div>
 {% endblock %}

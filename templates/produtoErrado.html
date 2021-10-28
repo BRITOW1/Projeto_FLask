@@ -1,28 +1,11 @@
 {% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Produto errado e/ou com problema {% endblock %}</h1>
-<div class="escolhas">
-  <section class="flex">
-    <div>
-      <button class="Choose">
-        <a href="{{ url_for('index')}}"> Compra do produto errado</a>
-      </button>
-    </div>
-    <div>
-      <button class="Choose">Arrependimento da compra</button>
-    </div>
-    <div>
-      <button class="Choose">Problema com a entrega</button>
-    </div>
-    <div>
-      <button class="Choose">Produto errado e/ou com problema</button>
-    </div>
-    <div>
-      <button class="Choose">Preço/Pagamento</button>
-    </div>
-    <div>
-      <button class="Choose">Não reconheço essa compra</button>
-    </div>
-
-  </section>
+<h1>{% block title %}Produto errado e/ou com problema {% endblock %}</h1>
+<div class="items-grid">
+    <a href="{{ url_for('') }}"><button>Produto não funciona</button></a>
+    <a href="{{ url_for('') }}"><button>Produto com defeito estético</button> </a> 
+    <a href="{{ url_for('') }}"><button>Embalagem amassada ou avariada</button> </a> 
+    <a href="{{ url_for('') }}"><button>Produto funciona parcialmente</button> </a> 
+    <a href="{{ url_for('') }}"><button>Preço/Pagamento</button> </a> 
+    <a href="{{ url_for('') }}"><button>Produto é diferente do que eu comprei</button> </a> 
 </div>
 {% endblock %}
