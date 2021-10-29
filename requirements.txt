@@ -15,3 +15,4 @@ MarkupSafe==2.0.1
 SQLAlchemy==1.4.26
 Werkzeug==2.0.2
 WTForms==2.3.3
+PyMySQL==1.0.2

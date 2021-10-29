@@ -1,26 +1,13 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Problema com a entrega {% endblock %}</h1>
-<div class="escolhas">
-    <section class="flex">
-        <div>
-            <button class="Choose">Compra do produto errado</button>
-        </div>
-        <div>
-            <button class="Choose">Arrependimento da compra</button>
-        </div>
-        <div>
-            <button class="Choose">Problema com a entrega</button>
-        </div>
-        <div>
-            <button class="Choose">Produto errado e/ou com problema</button>
-        </div>
-        <div>
-            <button class="Choose">Preço/Pagamento</button>
-        </div>
-        <div>
-            <button class="Choose">Não reconheço essa compra</button>
-        </div>
-
-    </section>
+<div class="items-grid">    
+    <a href="{{ url_for('resposta') }}"><button>Atraso na entrega</button></a>
+    <a href="{{ url_for('resposta') }}"><button>Está demorando muito</button> </a> 
+    <a href="{{ url_for('resposta') }}"><button>Endereço incorreto</button> </a> 
+    <a href="{{ url_for('resposta') }}"><button>Atendimento do transportador</button> </a>
+    <a href="{{ url_for('resposta') }}"><button>Falta de previsão da data de entrega</button> </a> 
+    <a href="{{ url_for('resposta') }}"><button>Falta de agendamento da entrega</button> </a> 
+    <a href="{{ url_for('resposta') }}"><button>Não recebi o produto</button> </a> 
+    <a href="{{ url_for('resposta') }}"><button>Encontrei um preço melhor</button> </a> 
 </div>
 {% endblock %}

@@ -69,6 +69,16 @@ def compraErrada():
 def pagamento():
     return render_template('pagamento.html')
 
+@app.route('/naoReconheco')
+@login_required
+def naoReconheco():
+    return render_template('naoReconheco.html')
+
+@app.route('/resposta')
+@login_required
+def resposta():
+    return render_template('resposta.html')
+
 
     
 
