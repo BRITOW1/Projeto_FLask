@@ -92,6 +92,6 @@ def autocomplete():
     with open("names.json", 'r', encoding='utf8') as f:   
         cities = json.load(f)
         f.close()
-        print(cities)
+        # print(cities)
     return Response(json.dumps(cities), mimetype='application/json')
 
