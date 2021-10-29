@@ -1,12 +1,11 @@
-from flask import render_template, flash, redirect, url_for,request, jsonify,Response
+from flask import render_template, flash, redirect, url_for,request, Response
 from flask.globals import session
 from flask.helpers import url_for
-from flask_wtf import form
 from werkzeug.utils import redirect
 from app import app,db, lm
 from flask_login import login_required, login_user, logout_user
-from wtforms import TextField, Form
-import os.path
+from wtforms import TextField, Form, form
+
 
 from app.models.tables import User
 from app.models.forms import LoginForm
