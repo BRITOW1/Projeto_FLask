@@ -88,8 +88,8 @@ class SearchForm(Form):
 
 @app.route('/_autocomplete', methods=['GET'])
 def autocomplete():
-    path = r'C:/Users/samue/Documents/Visual Studio 2017/Python/13_Flask/names.json'
-    with open(path, 'r', encoding='utf8') as f:   
+    # path = r'names.json'
+    with open("names.json", 'r', encoding='utf8') as f:   
         cities = json.load(f)
         f.close()
         print(cities)
