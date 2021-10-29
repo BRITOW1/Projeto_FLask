@@ -1,10 +1,26 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Compra do produto errado {% endblock %}</h1>
-<div class="items-grid">
-    <a href="{{ url_for() }}"><button>Modelo adquirido</button></a>
-    <a href="{{ url_for() }}"><button>Dimensão</button> </a> 
-    <a href="{{ url_for() }}"><button>Voltagem</button> </a> 
-    <a href="{{ url_for() }}"><button>Quantidade</button> </a> 
-    <a href="{{ url_for() }}"><button>Cor</button> </a> 
+<div class="escolhas">
+    <section class="flex">
+        <div>
+            <button class="Choose">Compra do produto errado</button>
+        </div>
+        <div>
+            <button class="Choose">Arrependimento da compra</button>
+        </div>
+        <div>
+            <button class="Choose">Problema com a entrega</button>
+        </div>
+        <div>
+            <button class="Choose">Produto errado e/ou com problema</button>
+        </div>
+        <div>
+            <button class="Choose">Preço/Pagamento</button>
+        </div>
+        <div>
+            <button class="Choose">Não reconheço essa compra</button>
+        </div>
+
+    </section>
 </div>
 {% endblock %}

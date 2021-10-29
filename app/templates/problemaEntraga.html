@@ -1,12 +1,26 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Problema com a entrega {% endblock %}</h1>
-<div class="items-grid">
-    <a href="{{ url_for() }}"><button>Atraso na entrega</button></a>
-    <a href="{{ url_for() }}"><button>Está demorando muito</button> </a> 
-    <a href="{{ url_for() }}"><button>Endereço incorreto</button> </a> 
-    <a href="{{ url_for() }}"><button>Atendimento do transportador</button> </a> 
-    <a href="{{ url_for() }}"><button>Falta de previsão da data de entrega</button> </a> 
-    <a href="{{ url_for() }}"><button>Falta de agendamento da entrega</button> </a>
-    <a href="{{ url_for() }}"><button>Não recebi o produto</button> </a> 
+<div class="escolhas">
+    <section class="flex">
+        <div>
+            <button class="Choose">Compra do produto errado</button>
+        </div>
+        <div>
+            <button class="Choose">Arrependimento da compra</button>
+        </div>
+        <div>
+            <button class="Choose">Problema com a entrega</button>
+        </div>
+        <div>
+            <button class="Choose">Produto errado e/ou com problema</button>
+        </div>
+        <div>
+            <button class="Choose">Preço/Pagamento</button>
+        </div>
+        <div>
+            <button class="Choose">Não reconheço essa compra</button>
+        </div>
+
+    </section>
 </div>
 {% endblock %}
