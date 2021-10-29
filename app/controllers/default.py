@@ -1,23 +1,35 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for,request, jsonify,Response
 from flask.globals import session
 from flask.helpers import url_for
 from flask_wtf import form
 from werkzeug.utils import redirect
 from app import app,db, lm
 from flask_login import login_required, login_user, logout_user
+from wtforms import TextField, Form
+import os.path
 
 from app.models.tables import User
 from app.models.forms import LoginForm
+
+#15h20
+import json 
+import os   
 
 @lm.user_loader
 def load_user(id):
     return User.query.filter_by(id=id).first()
 
 @app.route("/index")
+@app.route('/index', methods=['GET', 'POST'])
 @login_required
-#@app.route("/")
 def index():
-    return render_template('index.html')
+    form = SearchForm(request.form)
+    return render_template('index.html',form=form)
+
+#def teste():
+#    form = SearchForm(request.form)
+#    return render_template("teste.html", form=form)
+
 
 
 @app.route("/", methods = ["GET","POST"])
@@ -63,23 +75,23 @@ def problemaEntraga():
 def compraErrada():
     return render_template('compraErrada.html')
     
-
 @app.route('/pagamento')
 @login_required
 def pagamento():
     return render_template('pagamento.html')
 
-@app.route('/resposta')
-@login_required
-def resposta():
-    return render_template('resposta.html')
 
-@app.route('/reconhecimento')
-@login_required
-def reconhecimento():
-    return render_template('reconhecimento.html')
-
-
+#*********************
+class SearchForm(Form):
+    autocomp = TextField('', id='city_autocomplete')
     
 
+@app.route('/_autocomplete', methods=['GET'])
+def autocomplete():
+    path = r'C:/Users/samue/Documents/Visual Studio 2017/Python/13_Flask/names.json'
+    with open(path, 'r', encoding='utf8') as f:   
+        cities = json.load(f)
+        f.close()
+        print(cities)
+    return Response(json.dumps(cities), mimetype='application/json')
 
