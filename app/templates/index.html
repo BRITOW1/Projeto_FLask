@@ -4,8 +4,32 @@
 {% block content %}
 
 <h1> Buscar Erros </h1>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <div class="procura">
-    <input id="procurar" type="search" placeholder="Buscar">
+    <!-- <input id="procurar" type="search" placeholder="Buscar"> -->
+    {{ form.autocomp.label }}{{ form.autocomp }}
+    <script>
+        $(function() {
+            $.ajax({
+                url: '{{ url_for("autocomplete") }}'
+                }).done(function (data){
+                    $('#city_autocomplete').autocomplete({
+                        source: data,
+                        minLength: 2
+                    });
+                });
+            });
+    </script>
+    <!-- <button type="search" class="btn btn-default">Buscar</button> -->
+    <button type="button" class="btn btn-primary">
+        Buscar
+    </button>
+  
+
+
 </div>
 <div class="items-grid">
     <a href="{{ url_for('compraErrada') }}"><button>Compra do produto errado</button></a>
@@ -13,9 +37,10 @@
     <a href="{{ url_for('problemaEntraga') }}"><button>Problema com a entrega</button> </a> 
     <a href="{{ url_for('produtoErrado') }}"><button>Produto errado e/ou com problema</button> </a> 
     <a href="{{ url_for('pagamento') }}"><button>Preço/Pagamento</button> </a> 
-    <a href="{{ url_for('reconhecimento') }}"><button>Não reconheço essa compra</button> </a> 
+    <a href="{{ url_for('arrependimento') }}"><button>Não reconheço essa compra</button> </a> 
 </div>
 
 
   
 {% endblock %}
+************************************************
