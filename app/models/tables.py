@@ -42,15 +42,17 @@ class Motivos(db.Model):
     macro = db.Column(db.String)
     micro = db.Column(db.String)
     explicacao = db.Column(db.String)
+    page = db.Column(db.String)
 
-    def __init__(self, codigo, macro, micro, explicacao):
+    def __init__(self, codigo, macro, micro, explicacao, page):
         self.codigo = codigo
         self.macro = macro
         self.micro = micro
         self.explicacao = explicacao
+        self.page = page
     
     def __repr__(self):
-        return "<Post %r>"%self.codigo
+        return self.codigo
         
 #class Post(db.Model):
 #    __tablename__ = "posts"

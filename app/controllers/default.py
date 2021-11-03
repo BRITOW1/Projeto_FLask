@@ -80,10 +80,19 @@ def compraErrada():
 def pagamento():
     return render_template('pagamento.html')
 
-@app.route('/resposta')
+@app.route('/reconhecimento')
 @login_required
-def resposta():
-    return render_template('resposta.html')
+def reconhecimento():
+    return render_template('reconhecimento.html')
+
+@app.route('/resposta/<codigo>')
+# @app.route('/resposta')
+@login_required
+def resposta(codigo):
+    str(codigo)
+    resposta = Motivos.query.filter_by(codigo=codigo).first_or_404(description='There is no data with {}'.format(codigo))
+    print(resposta)
+    return render_template('resposta.html',post=resposta)
 
 
 #*********************

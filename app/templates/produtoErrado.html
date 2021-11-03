@@ -1,10 +1,10 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Produto errado e/ou com problema {% endblock %}</h1>
 <div class="items-grid">
-  <a href="{{ url_for('resposta') }}"><button>Produto não funciona</button></a>
-  <a href="{{ url_for('resposta') }}"><button>Produto com defeito estético</button> </a> 
-  <a href="{{ url_for('resposta') }}"><button>Embalagem amassada ou avariada</button> </a> 
-  <a href="{{ url_for('resposta') }}"><button>Produto funciona parcialmente</button> </a> 
-  <a href="{{ url_for('resposta') }}"><button>Produto é diferente do que comprei</button> </a> 
+  <a href="{{ url_for('resposta', codigo='D30') }}"><button>Não comprei esse produto</button></a>
+  <a href="{{ url_for('resposta', codigo='D31') }}"><button>Recebi um produto em duplicidade</button> </a>
+  <a href="{{ url_for('resposta', codigo='D32') }}"><button>Embalagem amassada ou avariada</button></a>
+  <a href="{{ url_for('resposta', codigo='D34') }}"><button>Produto funciona parcialmente</button> </a>
+  <a href="{{ url_for('resposta', codigo='D35') }}"><button>Produto é diferente do que eu comprei</button></a>
 </div>
 {% endblock %}

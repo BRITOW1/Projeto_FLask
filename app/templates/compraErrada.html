@@ -1,10 +1,10 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Compra do produto errado {% endblock %}</h1>
 <div class="items-grid">
-    <a href="{{ url_for('resposta') }}"><button>Modelo adquirido</button></a>
-    <a href="{{ url_for('resposta') }}"><button>Dimensão</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Voltagem</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Quantidade</button> </a>
-    <a href="{{ url_for('resposta') }}"><button>Cor</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D10') }}"><button>Modelo adquirido</button></a>
+    <a href="{{ url_for('resposta', codigo='D11') }}"><button>Dimensão</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D12') }}"><button>Voltagem</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D13') }}"><button>Quantidade</button> </a>
+    <a href="{{ url_for('resposta', codigo='D14') }}"><button>Cor</button> </a> 
 </div>
 {% endblock %}

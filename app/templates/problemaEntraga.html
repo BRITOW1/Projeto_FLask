@@ -1,13 +1,12 @@
 {% extends 'base.html' %}{% block content %}
 <h1>{% block title %} Problema com a entrega {% endblock %}</h1>
 <div class="items-grid">    
-    <a href="{{ url_for('resposta') }}"><button>Atraso na entrega</button></a>
-    <a href="{{ url_for('resposta') }}"><button>Está demorando muito</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Endereço incorreto</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Atendimento do transportador</button> </a>
-    <a href="{{ url_for('resposta') }}"><button>Falta de previsão da data de entrega</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Falta de agendamento da entrega</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Não recebi o produto</button> </a> 
-    <a href="{{ url_for('resposta') }}"><button>Encontrei um preço melhor</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D19') }}"><button>Atraso na entrega</button></a>
+    <a href="{{ url_for('resposta', codigo='D20') }}"><button>Está demorando muito</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D21') }}"><button>Endereço incorreto</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D22') }}"><button>Atendimento do transportador</button> </a>
+    <a href="{{ url_for('resposta', codigo='D23') }}"><button>Falta de previsão da data de entrega</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D24') }}"><button>Falta de agendamento da entrega</button> </a> 
+    <a href="{{ url_for('resposta', codigo='D25') }}"><button>Não recebi o produto</button> </a>
 </div>
 {% endblock %}

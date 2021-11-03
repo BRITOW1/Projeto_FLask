@@ -1,12 +1,11 @@
 {% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Compra do produto errado {% endblock %}</h1>
+<h1>{% block title %} {{post['micro']}} {% endblock %}</h1>
 <div class="respostas">
-  <span>Códido: D27</span>
-  <p>Produto não funciona corretamente. 
-    Ex: Geladeira que não liga, ou que não gela adequadamente. Microondas que não esquenta. Lavadora que vaza água. Quando o problema interfere no FUNCIONAMENTO.</p>
+  <span>Códido: {{post['codigo']}}</span>
+  <p>{{post['explicacao']}}</p>
   <div class="btn-resposta">
-    <button>voltar</button>
-    <button>Concluido</button>
+    <a href="{{url_for(post['page'])}}"><button>voltar</button></a>
+    <a href="{{ url_for('index')}}"><button>Concluido</button></a>
   </div>
 </div>
 {% endblock %}
