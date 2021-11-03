@@ -80,6 +80,16 @@ def compraErrada():
 def pagamento():
     return render_template('pagamento.html')
 
+@app.route('/embalagem')
+@login_required
+def embalagem():
+    return render_template('embalagem.html')
+
+@app.route('/escolhas')
+@login_required
+def escolhas():
+    return render_template('escolhas.html')
+
 @app.route('/reconhecimento')
 @login_required
 def reconhecimento():

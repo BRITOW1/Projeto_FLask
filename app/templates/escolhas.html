@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} Escolha {% endblock %}
+{% block content %}
+<div class="respostas">
+  <p>A embalagem também está Avariada?</p>
+  <div class="btn-resposta">
+    <a href="{{ url_for('resposta', codigo='D31') }}"><button>Não</button> </a>
+    <a href="{{ url_for('resposta', codigo='D32') }}"><button>Sim</button></a>
+  </div>
+</div>
+{% endblock %}
