@@ -34,6 +34,24 @@ class User(db.Model):
     def __repr__(self):
         return "<Post %r>"%self.username
 
+
+class Motivos(db.Model):
+    __tablename__ = "motivos"
+
+    codigo = db.Column(db.String, primary_key = True)
+    macro = db.Column(db.String)
+    micro = db.Column(db.String)
+    explicacao = db.Column(db.String)
+
+    def __init__(self, codigo, macro, micro, explicacao):
+        self.codigo = codigo
+        self.macro = macro
+        self.micro = micro
+        self.explicacao = explicacao
+    
+    def __repr__(self):
+        return "<Post %r>"%self.codigo
+        
 #class Post(db.Model):
 #    __tablename__ = "posts"
 #    id= db.Column(db.Integer, primary_key = True)

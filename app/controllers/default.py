@@ -1,12 +1,13 @@
-from flask import render_template, flash, redirect, url_for,request, Response
+from flask import render_template, flash, redirect, url_for,request,Response
 from flask.globals import session
 from flask.helpers import url_for
+from flask_wtf import form
 from werkzeug.utils import redirect
 from app import app,db, lm
 from flask_login import login_required, login_user, logout_user
-from wtforms import TextField, Form, form
+from wtforms import TextField, Form
 
-
+from app.models.tables import Motivos
 from app.models.tables import User
 from app.models.forms import LoginForm
 
@@ -79,6 +80,11 @@ def compraErrada():
 def pagamento():
     return render_template('pagamento.html')
 
+@app.route('/resposta')
+@login_required
+def resposta():
+    return render_template('resposta.html')
+
 
 #*********************
 class SearchForm(Form):
@@ -87,7 +93,6 @@ class SearchForm(Form):
 
 @app.route('/_autocomplete', methods=['GET'])
 def autocomplete():
-    # path = r'names.json'
     with open("names.json", 'r', encoding='utf8') as f:   
         cities = json.load(f)
         f.close()
