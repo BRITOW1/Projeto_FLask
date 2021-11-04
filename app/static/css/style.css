@@ -101,7 +101,7 @@ input {
 }
 
 .respostas{
-    margin-top: 10vh;
+    margin-top: 8vh;
     background-color: #024E73;
     display: flex;
     flex-direction: column;

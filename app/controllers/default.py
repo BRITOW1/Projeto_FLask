@@ -118,3 +118,9 @@ def autocomplete():
         # print(cities)
     return Response(json.dumps(cities), mimetype='application/json')
 
+# @app.route('/autocomplete', methods=['GET'])
+# def autocomplete(city_autocomplete):
+#     resposta = Motivos.query.filter_by(micro=city_autocomplete).first_or_404(description='There is no data with {}'.format(city_autocomplete))
+#     print(resposta)
+#     return resposta
+

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}{% block content %}
-<h1>{% block title %} {{post['micro']}} {% endblock %}</h1>
+<h1>{% block title %} {{post['macro']}} - {{post['micro']}} {% endblock %}</h1>
 <div class="respostas">
-  <span>Códido: {{post['codigo']}}</span>
+  <span>Códido:{{post['codigo']}}</span>
   <p>{{post['explicacao']}}</p>
   <div class="btn-resposta">
     <a href="{{url_for(post['page'])}}"><button>voltar</button></a>
