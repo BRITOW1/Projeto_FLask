@@ -27,6 +27,7 @@ a {
     color: white;
 }
 
+
 .header {
     background: #024E73;
     display: flex;
@@ -50,6 +51,9 @@ a {
     padding: 10px;
 }
 
+button{
+    border-radius: 35px;
+}
 
 
 h1 {
@@ -63,82 +67,125 @@ h1 {
   align-items: center;
   justify-content: center;
   margin: 60px auto;
+  width: 1000;  
+}
 
-  width: 50%;
-  
+
+nav{
+    background-color: #024E73;
 }
 
 input {
     width: 50%;
     height: 40px;
     border-radius: 10px;
+    margin-left: 30px;
 }
 
 .items-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
-    padding: 32px;
+    padding: px;
 }
 
-.items-grid button {
-    background-color: #024E73;
-    list-style: none;
+.items-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: px;
+}
+
+.botao{
+    color: #024E73;
+    background-color: white;
+    border: 2px solid #024E73;
+    border-radius: 35px;
+    padding: 5px;
+    width: 200px;
+    text-align:center;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.botao2{
+    color: #024E73;
+    background-color: white;
 
     border: 2px solid #024E73;
-    border-radius: 45px;
+    border-radius: 35px;
 
     height: 100px;
-    margin-top: 20px;
-    padding: 25px;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
+    text-align:center;
+    padding: 30px 0 0 0 ;
 
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    color: white;
+    font-size: 1.5rem;
+}
+
+.botao3{
+    color: #024E73;
+    background-color: white;
+
+    border: 2px solid #024E73;
+    border-radius: 35px;
+
+    height: 100px;
+    margin-top: 40px;
+    text-align:center;
+    padding: 15px;
+
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
     font-size: 1.5rem;
 }
 
 .respostas{
     margin-top: 8vh;
-    background-color: #024E73;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
+}
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px solid;
+.respostas2{
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resposta{
+    margin-top: 8vh;
 }
 
 .respostas span {
     margin-top: 50px;
+    background-color: #024E73;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
+    padding: 15px;
 }
 
 p{
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    color: white;
     font-size: 2rem;
     padding: 5%;
+    background-color: whitesmoke;
 }
 
 .btn-resposta{
     display: flex;
-    width: 800px;
+    width: 600px;
     padding: 5%;
     justify-content: space-between;
+    align-items: center;
 }
 
-
-
-.btn-resposta button{
-    border: 2px solid;
-    border-radius: 45px;
-    padding: 13px;
-}

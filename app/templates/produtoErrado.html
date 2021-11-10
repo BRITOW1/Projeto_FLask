@@ -1,10 +1,14 @@
-{% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Produto errado e/ou com problema {% endblock %}</h1>
+{% extends 'base.html' %}
+{% block title %} Meu produto veio errado e/ou com problema {% endblock %}
+{% block content %}
+<div class="resposta">
+  <h1> Meu produto veio errado e/ou com problema</h1>
 <div class="items-grid">
-  <a href="{{ url_for('resposta', codigo='D30') }}"><button>Não comprei esse produto</button></a>
-  <a href="{{ url_for('escolhas') }}"><button>Produto com defeito estético</button> </a>
-  <a href="{{ url_for('embalagem') }}"><button>Embalagem amassada ou avariada</button></a>
-  <a href="{{ url_for('resposta', codigo='D34') }}"><button>Produto funciona parcialmente</button> </a>
-  <a href="{{ url_for('resposta', codigo='D35') }}"><button>Produto é diferente do que eu comprei</button></a>
+  <a href="{{ url_for('resposta', codigo='D30') }}" class="botao3">Produto não funciona</a>
+  <a href="{{ url_for('escolhas') }}" class="botao3">Produto com defeito estético </a>
+  <a href="{{ url_for('embalagem') }}" class="botao3">Embalagem amassada ou avariada</a>
+  <a href="{{ url_for('resposta', codigo='D34') }}" class="botao3">Produto funciona parcialmente </a>
+  <a href="{{ url_for('resposta', codigo='D35') }}" class="botao3">Produto é diferente do que eu comprei</a>
+</div>
 </div>
 {% endblock %}

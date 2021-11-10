@@ -1,11 +1,13 @@
-{% extends 'base.html' %}{% block content %}
-<h1>{% block title %} {{post['macro']}} - {{post['micro']}} {% endblock %}</h1>
+{% extends 'base.html' %}
+{% block title %} {{post['macro']}} - {{post['micro']}} {% endblock %}
+{% block content %} 
 <div class="respostas">
-  <span>Códido:{{post['codigo']}}</span>
+  <h1>{{post['macro']}} - {{post['micro']}}</h1>
+  <span>Código: {{post['codigo']}}</span>
   <p>{{post['explicacao']}}</p>
   <div class="btn-resposta">
-    <a href="{{url_for(post['page'])}}"><button>voltar</button></a>
-    <a href="{{ url_for('index')}}"><button>Concluido</button></a>
+    <a href="{{url_for(post['page'])}}" class="botao">Voltar</a>
+    <a href="{{ url_for('index')}}" class="botao">Concluido</a>
   </div>
 </div>
 {% endblock %}

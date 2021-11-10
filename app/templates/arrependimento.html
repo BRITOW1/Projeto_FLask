@@ -1,9 +1,13 @@
-{% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Arrependimento da compra {% endblock %}</h1>
-<div class="items-grid">
-    <a href="{{ url_for('resposta', codigo='D15') }}"><button>Modelo adquirido</button></a>
-    <a href="{{ url_for('resposta', codigo='D16') }}"><button>Cor</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D17') }}"><button>Problema financeiro (pessoal)</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D18') }}"><button>Não quero mais o produto</button> </a> 
+{% extends 'base.html' %}
+{% block title %} Me arrependi desta compra {% endblock %}
+{% block content %}
+<div class="resposta">
+  <h1>Me arrependi desta compra</h1>
+  <div class="items-grid2">
+    <a href="{{ url_for('resposta', codigo='D15') }}" class="botao2">Modelo adquirido</a>
+    <a href="{{ url_for('resposta', codigo='D16') }}" class="botao2">Cor</a>
+    <a href="{{ url_for('resposta', codigo='D17') }}" class="botao2">Problema financeiro (pessoal)</a>
+    <a href="{{ url_for('resposta', codigo='D18') }}" class="botao2">Não quero mais o produto</a>
   </div>
+</div>
 {% endblock %}

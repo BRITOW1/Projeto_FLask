@@ -2,11 +2,11 @@
 <h1>{% block title %} Embalagem amassada ou avariada {% endblock %}</h1>
 <div class="respostas">
   <span>Códido: D32</span>
-  <p>Embalagem do produto chegou amassada ou avariada.</p>
-  <p>OBS: Se o produto estiver avariado, não esqueça de inserir a informação na OA</p>
+  <p>Embalagem do produto chegou amassada ou avariada.
+    OBS: Se o produto estiver avariado, não esqueça de inserir a informação na OA</p>
   <div class="btn-resposta">
-    <a href="{{url_for('produtoErrado')}}"><button>voltar</button></a>
-    <a href="{{ url_for('index')}}"><button>Concluido</button></a>
+    <a href="{{url_for('produtoErrado')}}" class="botao">voltar</a>
+    <a href="{{ url_for('index')}}" class="botao">Concluido</a>
   </div>
 </div>
 {% endblock %}

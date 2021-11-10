@@ -1,7 +1,8 @@
-from flask import render_template, flash, redirect, url_for,request,Response
+from flask import render_template, flash, redirect, url_for,request,Response, jsonify
 from flask.globals import session
 from flask.helpers import url_for
 from flask_wtf import form
+from sqlalchemy.orm import query
 from werkzeug.utils import redirect
 from app import app,db, lm
 from flask_login import login_required, login_user, logout_user
@@ -15,6 +16,8 @@ from app.models.forms import LoginForm
 import json 
 import os   
 
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
+
 @lm.user_loader
 def load_user(id):
     return User.query.filter_by(id=id).first()
@@ -24,7 +27,7 @@ def load_user(id):
 @login_required
 def index():
     form = SearchForm(request.form)
-    return render_template('index.html',form=form)
+    return render_template('index.html')
 
 #def teste():
 #    form = SearchForm(request.form)
@@ -104,10 +107,15 @@ def resposta(codigo):
     print(resposta)
     return render_template('resposta.html',post=resposta)
 
+@app.route('/buscar')
+@login_required
+def buscar():
+    return render_template('buscar.html')
+
 
 #*********************
 class SearchForm(Form):
-    autocomp = TextField('', id='city_autocomplete')
+    autocomp = TextField('', id='procurar')
     
 
 @app.route('/_autocomplete', methods=['GET'])
@@ -118,9 +126,13 @@ def autocomplete():
         # print(cities)
     return Response(json.dumps(cities), mimetype='application/json')
 
-# @app.route('/autocomplete', methods=['GET'])
-# def autocomplete(city_autocomplete):
-#     resposta = Motivos.query.filter_by(micro=city_autocomplete).first_or_404(description='There is no data with {}'.format(city_autocomplete))
-#     print(resposta)
-#     return resposta
+# @app.route('/procurar')
+# def autocomplete():
+#     query = request.args.get('query')
+#     with open("Motivos.json", "r", encoding='utf8') as f:
+#         cities = json.load(f)
+#         # f.close()
+#         # print(cities)
+#         return jsonify({"suggestions":cities})
+
 

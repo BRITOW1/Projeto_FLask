@@ -1,12 +1,16 @@
-{% extends 'base.html' %}{% block content %}
-<h1>{% block title %} Problema com a entrega {% endblock %}</h1>
-<div class="items-grid">    
-    <a href="{{ url_for('resposta', codigo='D19') }}"><button>Atraso na entrega</button></a>
-    <a href="{{ url_for('resposta', codigo='D20') }}"><button>Está demorando muito</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D21') }}"><button>Endereço incorreto</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D22') }}"><button>Atendimento do transportador</button> </a>
-    <a href="{{ url_for('resposta', codigo='D23') }}"><button>Falta de previsão da data de entrega</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D24') }}"><button>Falta de agendamento da entrega</button> </a> 
-    <a href="{{ url_for('resposta', codigo='D25') }}"><button>Não recebi o produto</button> </a>
+{% extends 'base.html' %}
+{% block title %} Problemas com a entrega {% endblock %}
+{% block content %}
+<div class="resposta">
+    <h1>Problemas com a entrega</h1>
+    <div class="items-grid">
+        <a href="{{ url_for('resposta', codigo='D19') }}" class="botao2">Atraso na entrega</a>
+        <a href="{{ url_for('resposta', codigo='D20') }}" class="botao2">Está demorando muito</a>
+        <a href="{{ url_for('resposta', codigo='D21') }}" class="botao2">Endereço incorreto</a>
+        <a href="{{ url_for('resposta', codigo='D22') }}" class="botao3">Atendimento do transportador</a>
+        <a href="{{ url_for('resposta', codigo='D23') }}" class="botao3">Falta de previsão da data de entrega</a>
+        <a href="{{ url_for('resposta', codigo='D24') }}" class="botao3">Falta de agendamento da entrega</a>
+        <a href="{{ url_for('resposta', codigo='D25') }}" class="botao2">Não recebi o produto</a>
+    </div>
 </div>
 {% endblock %}

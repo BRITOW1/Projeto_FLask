@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
+{% block title %} Não reconheço essa compra {% endblock %}
 {% block content %}
-<h1>{% block title %} Não reconheço essa compra {% endblock %}</h1>
-<div class="items-grid">
-  <a href="{{ url_for('resposta', codigo='D36') }}"><button>Não comprei esse produto</button></a>
-  <a href="{{ url_for('resposta', codigo='D37') }}"><button>Recebi um produto em duplicidade</button> </a> 
+<div class="resposta">
+  <h1>Não reconheço essa compra</h1>
+  <div class="items-grid2">
+    <a href="{{ url_for('resposta', codigo='D36') }}" class="botao2">Não comprei esse produto</a>
+    <a href="{{ url_for('resposta', codigo='D37') }}" class="botao2">Recebi um produto em duplicidade</a>
+  </div>
 </div>
 {% endblock %}

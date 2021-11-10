@@ -1,110 +1,111 @@
 [
   {
-    "value":"D10",
-    "data":"Modelo adquirido [Comprei o produto errado]"
+    "data":"D10",
+    "value":"Modelo adquirido [Comprei o produto errado]"
   },
   {
-    "value":"D11",
-    "data":"Dimensao [Comprei o produto errado]"
-  },
-  {"value":"D12",
-    "data":"Voltagem [Comprei o produto errado]"
+    "data":"D11",
+    "value":"Dimensao [Comprei o produto errado]"
   },
   {
-    "value":"D13",
-    "data":"Quantidade [Comprei o produto errado]"
+    "data":"D12",
+    "value":"Voltagem [Comprei o produto errado]"
   },
   {
-    "value":"D14",
-    "data":"Cor [Comprei o produto errado]"
+    "data":"D13",
+    "value":"Quantidade [Comprei o produto errado]"
   },
   {
-    "value":"D15",
-    "data":"Modelo adquirido [Me arrependi desta compra]"
+    "data":"D14",
+    "value":"Cor [Comprei o produto errado]"
   },
   {
-    "value":"D16",
-    "data":"Cor [Me arrependi desta compra]"
+    "data":"D15",
+    "value":"Modelo adquirido [Me arrependi desta compra]"
   },
   {
-    "value":"D17",
-    "data":"Problema financeiro (pessoal) [Me arrependi desta compra]"
+    "data":"D16",
+    "value":"Cor [Me arrependi desta compra]"
   },
   {
-    "value":"D18",
-    "data":"Nao quero mais o produto [Me arrependi desta compra]"
+    "data":"D17",
+    "value":"Problema financeiro (pessoal) [Me arrependi desta compra]"
   },
   {
-    "value":"D19",
-    "data":"Atraso na entrega [Problemas com a entrega]"
+    "data":"D18",
+    "value":"Nao quero mais o produto [Me arrependi desta compra]"
   },
   {
-    "value":"D20",
-    "data":"Esta demorando muito [Problemas com a entrega]"
+    "data":"D19",
+    "value":"Atraso na entrega [Problemas com a entrega]"
   },
   {
-    "value":"D21",
-    "data":"Endereço incorreto [Problemas com a entrega]"
+    "data":"D20",
+    "value":"Esta demorando muito [Problemas com a entrega]"
   },
   {
-    "value":"D22",
-    "data":"Atendimento do transportador [Problemas com a entrega]"
+    "data":"D21",
+    "value":"Endereço incorreto [Problemas com a entrega]"
   },
   {
-    "value":"D23",
-    "data":"Falta de previsao da data de entrega [Problemas com a entrega]"
+    "data":"D22",
+    "value":"Atendimento do transportador [Problemas com a entrega]"
   },
   {
-    "value":"D24",
-    "data":"Falta de agendamento da entrega [Problemas com a entrega]"
+    "data":"D23",
+    "value":"Falta de previsao da data de entrega [Problemas com a entrega]"
   },
   {
-    "value":"D25",
-    "data":"Nao recebi o produto [Problemas com a entrega]"
+    "data":"D24",
+    "value":"Falta de agendamento da entrega [Problemas com a entrega]"
   },
   {
-    "value":"D26",
-    "data":"Encontrei um preço melhor [Preço/Pagamento]"
+    "data":"D25",
+    "value":"Nao recebi o produto [Problemas com a entrega]"
   },
   {
-    "value":"D27",
-    "data":"Cobrança incorreta [Preço/Pagamento]"
+    "data":"D26",
+    "value":"Encontrei um preço melhor [Preço/Pagamento]"
   },
   {
-    "value":"D28",
-    "data":"Selecao incorreta da forma de pagamento [Preço/Pagamento]"
+    "data":"D27",
+    "value":"Cobrança incorreta [Preço/Pagamento]"
   },
   {
-    "value":"D29",
-    "data":"Ja paguei e consta pendente [Preço/Pagamento]"
+    "data":"D28",
+    "value":"Selecao incorreta da forma de pagamento [Preço/Pagamento]"
   },
   {
-    "value":"D30",
-    "data":"Produto nao funciona [Meu produto veio errado/com problema]"
+    "data":"D29",
+    "value":"Ja paguei e consta pendente [Preço/Pagamento]"
   },
   {
-    "value":"D31",
-    "data":"Produto com defeito estetico [Meu produto veio errado/com problema]"
+    "data":"D30",
+    "value":"Produto nao funciona [Meu produto veio errado/com problema]"
   },
   {
-    "value":"D32",
-    "data":"Embalagem amassada ou avariada [Meu produto veio errado/com problema]"
+    "data":"D31",
+    "value":"Produto com defeito estetico [Meu produto veio errado/com problema]"
   },
   {
-    "value":"D34",
-    "data":"Produto funciona parcialmente [Meu produto veio errado/com problema]"
+    "data":"D32",
+    "value":"Embalagem amassada ou avariada [Meu produto veio errado/com problema]"
   },
   {
-    "value":"D35",
-    "data":"Produto e diferente do que comprei [Meu produto veio errado/com problema]"
+    "data":"D34",
+    "value":"Produto funciona parcialmente [Meu produto veio errado/com problema]"
   },
   {
-    "value":"D36",
-    "data":"Nao comprei esse produto [Nao reconheço essa compra]"
+    "data":"D35",
+    "value":"Produto e diferente do que comprei [Meu produto veio errado/com problema]"
   },
   {
-    "value":"D37",
-    "data":"Recebi um produto em duplicidade [Nao reconheço essa compra]"
+    "data":"D36",
+    "value":"Nao comprei esse produto [Nao reconheço essa compra]"
+  },
+  {
+    "data":"D37",
+    "value":"Recebi um produto em duplicidade [Nao reconheço essa compra]"
   }
 ]
 
