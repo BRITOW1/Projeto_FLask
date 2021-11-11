@@ -66,7 +66,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 60px auto;
+  margin: 120px auto;
   width: 1000;  
 }
 
@@ -74,26 +74,47 @@ h1 {
 nav{
     background-color: #024E73;
 }
+form{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-input {
+form input {
     width: 50%;
     height: 40px;
     border-radius: 10px;
-    margin-left: 30px;
+    margin-right: 10px;
+}
+
+form .buscar {
+    background-color: #024E73;
+    color: white;
+    width: 20%;
+    padding: 8px;
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .items-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
-    padding: px;
+    
 }
 
 .items-grid2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    padding: px;
+    
+}
+
+.items-grid3{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
 .botao{

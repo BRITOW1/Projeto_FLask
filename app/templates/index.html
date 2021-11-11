@@ -8,18 +8,18 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.26/jquery.autocomplete.min.js"></script>
 
 <div class="procura">
-        <input id="procurar" type="search" placeholder="Buscar">
-        <button type="button" class="btn btn-primary">Buscar Motivos</button>
-        <script>
-            $('#procurar').autocomplete({
-                serviceUrl: '/procurar',
-                dataType: 'json',
-                onSearchComplete: function (query, suggestions) {
-                    console.log(suggestions)
-                    console.log(query)
-                }
-            });
-        </script>
+    
+    <form id="formAPI" method="get" action="">
+        <input type="text" id="ipAdd" onchange="ipChange(this)">
+        <button type="submit" class="buscar">Buscar Motivos</button>
+    </form>
+    <script>
+        function ipChange(elementoIp){
+        let urlApi = "/buscar/";
+        let elementoForm = document.querySelector('#formAPI');
+        elementoForm.action = urlApi + elementoIp.value;
+        }
+    </script>       
 </div>
 <div class="items-grid">
     <a href="{{ url_for('compraErrada') }}" class="botao2">Comprei produto errado</a>

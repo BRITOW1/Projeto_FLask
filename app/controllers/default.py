@@ -99,18 +99,43 @@ def reconhecimento():
     return render_template('reconhecimento.html')
 
 @app.route('/resposta/<codigo>')
-# @app.route('/resposta')
 @login_required
 def resposta(codigo):
     str(codigo)
     resposta = Motivos.query.filter_by(codigo=codigo).first_or_404(description='There is no data with {}'.format(codigo))
-    print(resposta)
     return render_template('resposta.html',post=resposta)
 
-@app.route('/buscar')
+@app.route('/listagem')
 @login_required
-def buscar():
-    return render_template('buscar.html')
+def listagem():
+    lista = []
+    listagem = Motivos.query.all()
+    for list in listagem:
+        lista.append(list)
+    return render_template('listagem.html', post=listagem)
+
+@app.route('/buscar/<name>')
+@login_required
+def buscar(name):
+    micro = []
+    macro = []
+    desc = []
+
+    macro4 = "%{}%".format(name)
+
+    rMi = Motivos.query.filter(Motivos.micro.like(macro4)).all()
+    for mi in rMi:
+        micro.append(mi)
+    
+    rMa = Motivos.query.filter(Motivos.macro.like(macro4)).all()
+    for ma in rMa:
+        macro.append(ma)
+    
+    rDs = Motivos.query.filter(Motivos.explicacao.like(macro4)).all()
+    for exp in rDs:
+        desc.append(exp)
+        
+    return render_template('buscar.html', micro=micro, macro=macro, desc=desc)
 
 
 #*********************
@@ -118,21 +143,21 @@ class SearchForm(Form):
     autocomp = TextField('', id='procurar')
     
 
-@app.route('/_autocomplete', methods=['GET'])
+# @app.route('/_autocomplete', methods=['GET'])
+# def autocomplete():
+#     with open("names.json", 'r', encoding='utf8') as f:   
+#         cities = json.load(f)
+#         f.close()
+#         # print(cities)
+#     return Response(json.dumps(cities), mimetype='application/json')
+
+@app.route('/procurar')
 def autocomplete():
-    with open("names.json", 'r', encoding='utf8') as f:   
+    query = request.args.get('query')
+    with open("Motivos.json", "r", encoding='utf8') as f:
         cities = json.load(f)
         f.close()
-        # print(cities)
-    return Response(json.dumps(cities), mimetype='application/json')
-
-# @app.route('/procurar')
-# def autocomplete():
-#     query = request.args.get('query')
-#     with open("Motivos.json", "r", encoding='utf8') as f:
-#         cities = json.load(f)
-#         # f.close()
-#         # print(cities)
-#         return jsonify({"suggestions":cities})
+        print(cities)
+        return jsonify({"suggestions":cities})
 
 
