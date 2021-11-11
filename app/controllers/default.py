@@ -1,3 +1,4 @@
+from typing import AsyncContextManager
 from flask import render_template, flash, redirect, url_for,request,Response, jsonify
 from flask.globals import session
 from flask.helpers import url_for
@@ -128,12 +129,15 @@ def buscar(name):
         micro.append(mi)
     
     rMa = Motivos.query.filter(Motivos.macro.like(macro4)).all()
+    aMa = "zero"
     for ma in rMa:
-        macro.append(ma)
-    
+        if ma.macro != aMa:
+            macro.append(ma)        
+        aMa = ma.macro
+
     rDs = Motivos.query.filter(Motivos.explicacao.like(macro4)).all()
     for exp in rDs:
-        desc.append(exp)
+        desc.append(exp)   
         
     return render_template('buscar.html', micro=micro, macro=macro, desc=desc)
 
