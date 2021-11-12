@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block title %} Compra do produto errado {% endblock %}
 {% block content %}
-<div class="resposta">
+<div class="respostaBusca">
   <h1>Resultados</h1>
   <div class="items-grid3">
-    <h2>Motivo Macro</h2>
+    <!-- <h2>Motivo Macro</h2>
     {% for item2 in macro %}
     <a href="{{ url_for(item2.page)}}">{{item2.macro}}</a>
     {% endfor %}
-    <br>
-    <h2>Motivo Micro</h2>
+    <br> -->
+    <h2>Motivo</h2>
     {% for item in micro %}
     <a href="{{ url_for('resposta', codigo=item.codigo)}}">{{item.macro}} - {{item.micro}}</a>
     {% endfor %}
     <br>
-    <h2>Motivo Descrição</h2>
+    <h2>Descrição do Motivo</h2>
     {% for item3 in desc %}
     <a href="{{ url_for('resposta', codigo=item3.codigo)}}">{{item3.explicacao}}</a>
     {% endfor %}

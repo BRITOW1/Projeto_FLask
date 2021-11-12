@@ -66,8 +66,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 120px auto;
-  width: 1000;  
+  margin: 150px auto 80px;
 }
 
 
@@ -101,6 +100,7 @@ form .buscar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    margin: auto 300px auto 300px;
     
 }
 
@@ -144,7 +144,7 @@ form .buscar {
 
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .botao3{
@@ -161,7 +161,7 @@ form .buscar {
 
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .respostas{
@@ -180,9 +180,6 @@ form .buscar {
     align-items: center;
 }
 
-.resposta{
-    margin-top: 8vh;
-}
 
 .respostas span {
     margin-top: 50px;
@@ -208,5 +205,48 @@ p{
     padding: 5%;
     justify-content: space-between;
     align-items: center;
+}
+
+/* paginas Micro */
+.resposta{
+    margin-top: 8vh;
+    margin: 200px 200px auto 200px;
+}
+
+.resposta2{
+    margin-top: 8vh;
+    margin: 200px 450px auto 450px;
+}
+
+/* Pagina listagem */
+.listagem{
+    margin: 40px 200px auto 200px;
+}
+
+/* listagem 2 */
+table {
+    background-color: whitesmoke;
+}
+
+
+/* pagina de resultado da busca */
+.respostaBusca{
+    margin: 8vh 250px auto;
+    width: 1300px;
+}
+
+/* .respostaBusca a{
+    text-decoration: none;
+    color: black;
+} */
+
+.respostaBusca table {
+    background-color: whitesmoke;
+}
+
+.items-grid3{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 

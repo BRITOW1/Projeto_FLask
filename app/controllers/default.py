@@ -49,7 +49,7 @@ def login():
             return redirect(url_for("index"))
         else:
             flash("Acesso não autorizado!")
-    return render_template('login.html', form=form)
+    return render_template('login2.html', form=form)
 
 
 @app.route("/logout")
@@ -113,7 +113,7 @@ def listagem():
     listagem = Motivos.query.all()
     for list in listagem:
         lista.append(list)
-    return render_template('listagem.html', post=listagem)
+    return render_template('listagem2.html', post=listagem)
 
 @app.route('/buscar/<name>')
 @login_required
@@ -134,12 +134,13 @@ def buscar(name):
         if ma.macro != aMa:
             macro.append(ma)        
         aMa = ma.macro
+        # macro.append(ma)
 
     rDs = Motivos.query.filter(Motivos.explicacao.like(macro4)).all()
     for exp in rDs:
         desc.append(exp)   
         
-    return render_template('buscar.html', micro=micro, macro=macro, desc=desc)
+    return render_template('buscar2.html', micro=micro, macro=macro, desc=desc)
 
 
 #*********************

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Compra do produto errado {% endblock %}
+{% block content %}
+<div class="respostaBusca">
+  <h1>Resultados</h1>
+    <div class="items-grid3">
+    <h2>Motivo</h2>
+    <table class="table table-striped">
+    {% for item in micro %}
+    <tr>
+      <td><a href="{{ url_for('resposta', codigo=item.codigo)}}">{{item.macro}} - {{item.micro}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+    <br>
+    <h2>Descrição do Motivo</h2>
+    <table class="table table-striped">
+    {% for item3 in desc %}
+    <tr>
+      <td><a href="{{ url_for('resposta', codigo=item3.codigo)}}">{{item3.explicacao}}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+    <br>
+    <br>
+  </div>
+</div>
+{% endblock %}

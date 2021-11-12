@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Compra do produto errado {% endblock %}
+{% block content %}
+<div class="listagem">
+  <h1>Todos os Códigos</h1>
+  <div class="items-grid3">
+    <table class="table table-striped">
+      <tr>
+        <td>Código</td>
+        <td>Motivo Macro</td>
+        <td>Motivo Micro</td>
+        <td>Detalhes</td>
+      </tr>   
+    {% for list in post %}
+    <tr>
+      <td>{{list.codigo}} </td>
+      <td>{{list.macro}}</td>
+      <td>{{list.micro}}</td>
+      <td>{{list.explicacao}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+    <br>
+  </div>
+</div>
+{% endblock %}
