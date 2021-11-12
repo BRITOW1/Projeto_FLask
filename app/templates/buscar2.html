@@ -17,7 +17,7 @@
     <table class="table table-striped">
     {% for item3 in desc %}
     <tr>
-      <td><a href="{{ url_for('resposta', codigo=item3.codigo)}}">{{item3.explicacao}}</a></td>
+      <td><a href="{{ url_for('resposta', codigo=item3.codigo)}}">{{item3.explicacao}} {{item3.exemplo}}</a></td>
     </tr>
     {% endfor %}
   </table>

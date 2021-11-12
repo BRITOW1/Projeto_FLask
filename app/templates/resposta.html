@@ -4,7 +4,8 @@
 <div class="respostas">
   <h1>{{post['macro']}} - {{post['micro']}}</h1>
   <span>Código: {{post['codigo']}}</span>
-  <p>{{post['explicacao']}}</p>
+  <p>{{post['explicacao']}} <br>
+    {{post['exemplo']}}</p>
   <div class="btn-resposta">
     <a href="{{url_for(post['page'])}}" class="botao">Voltar</a>
     <a href="{{ url_for('index')}}" class="botao">Concluído</a>

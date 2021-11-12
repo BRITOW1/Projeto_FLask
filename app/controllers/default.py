@@ -45,7 +45,7 @@ def login():
         print(user)
         if user and user.password == form.password.data:
             login_user(user)
-            flash("Login realizado com sucesso!")
+            # flash("Login realizado com sucesso!")
             return redirect(url_for("index"))
         else:
             flash("Acesso não autorizado!")
