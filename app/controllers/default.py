@@ -142,6 +142,14 @@ def buscar(name):
         
     return render_template('buscar2.html', micro=micro, macro=macro, desc=desc)
 
+@app.route('/guia')
+@login_required
+def guia():
+    return render_template('guia.html')
+
+@app.route('/guialogin')
+def guia2():
+    return render_template('guia2.html')
 
 #*********************
 class SearchForm(Form):

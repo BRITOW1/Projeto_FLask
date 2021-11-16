@@ -18,11 +18,24 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src="{{ url_for('static', filename= 'img/logo.png') }}" alt="" width="125"
-                height="40" class="d-inline-block align-text-top">
+        <a href="{{url_for('login')}}"><img src="{{ url_for('static', filename= 'img/logo.png') }}" alt="" width="125" height="40"
+                class="d-inline-block align-text-top">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
+
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{ url_for('guia2') }}">Guia de uso<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
     </nav>
 
-    <div class="login">
+    <div class=" login">
 
         <div class="col-md-4 col-md-offset-4">
             <h2>Login</h2>
