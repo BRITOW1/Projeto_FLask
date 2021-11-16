@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>{% block title %} {% endblock %}</title>
     <!-- Bootstrap core CSS -->
     <link href="{{url_for('static',filename='css/bootstrap.min.css') }}" rel="stylesheet">
@@ -29,21 +29,24 @@
 
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('index')}}">Início<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('index')}}"> Início
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('listagem') }}">Todos os Códigos<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('listagem') }}">| Todos os Códigos |
+                        <span class="sr-only">(current)</span>
+                </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ url_for('guia') }}">Guia de uso<span
-                            class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ url_for('guia') }}">Guia de Uso
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
             </ul>
-            
+
         </div>
-    </nav>  
+    </nav>
     <div class="container-fluid">
         {% with messages = get_flashed_messages() %}
         {% if messages %}
