@@ -2,7 +2,7 @@ body, ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -66,7 +66,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 150px auto 80px;
+  margin: 100px auto 40px;
 }
 
 
@@ -100,7 +100,7 @@ form .buscar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
-    margin: auto 300px auto 300px;
+    margin: 0px 300px auto 300px;
     
 }
 
@@ -127,7 +127,7 @@ form .buscar {
     text-align:center;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .botao2{
@@ -140,14 +140,31 @@ form .buscar {
     height: 100px;
     margin-top: 40px;
     text-align:center;
-    padding: 30px 0 0 0 ;
+    padding: 35px 0 0 0 ;
 
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .botao3{
+    color: #024E73;
+    background-color: white;
+
+    border: 2px solid #024E73;
+    border-radius: 35px;
+
+    height: 100px;
+    margin-top: 40px;
+    text-align:center;
+    padding: 25px 0 0 0;
+
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.botao4{
     color: #024E73;
     background-color: white;
 
@@ -161,11 +178,11 @@ form .buscar {
 
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .respostas{
-    margin-top: 8vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,20 +199,20 @@ form .buscar {
 
 
 .respostas span {
-    margin-top: 50px;
+    margin-top: 40px;
     background-color: #024E73;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
     color: white;
-    font-size: 4rem;
+    font-size: 2rem;
     padding: 15px;
 }
 
 p{
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
-    font-size: 2rem;
-    padding: 5%;
+    font-size: 1.2rem;
+    padding: 3%;
     background-color: whitesmoke;
 }
 
@@ -207,15 +224,34 @@ p{
     align-items: center;
 }
 
+.btn-resposta2{
+    display: flex;
+    width: 600px;
+    padding: 5%;
+    margin-left: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
 /* paginas Micro */
 .resposta{
     margin-top: 8vh;
-    margin: 200px 200px auto 200px;
+    margin: 40px  auto ;
+}
+
+.resposta img{
+    width: 50px;
+    height: 50px;
 }
 
 .resposta2{
     margin-top: 8vh;
-    margin: 200px 450px auto 450px;
+    margin: 80px 280px auto 280px;
+}
+
+.resposta3{
+    margin-top: 8vh;
+    margin: 40px auto; 
 }
 
 /* Pagina listagem */
