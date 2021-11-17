@@ -4,6 +4,7 @@ body, ul, li, p{
     list-style: none;
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
+
 }
 
 body {
@@ -25,6 +26,7 @@ img{
 a {
     text-decoration: none;
     color: white;
+    font-weight: 700;
 }
 
 
@@ -72,6 +74,10 @@ h1 {
 
 nav{
     background-color: #024E73;
+}
+
+nav a {
+    font-weight: 400;
 }
 form{
     width: 1000px;
